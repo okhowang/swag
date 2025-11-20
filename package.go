@@ -6,6 +6,8 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
+
+	"golang.org/x/tools/go/packages"
 )
 
 // PackageDefinitions files and definition in a package.
@@ -27,6 +29,8 @@ type PackageDefinitions struct {
 
 	// package path
 	Path string
+
+	Package *packages.Package
 }
 
 // ConstVariableGlobalEvaluator an interface used to evaluate enums across packages
